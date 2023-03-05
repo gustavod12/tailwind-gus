@@ -2,12 +2,12 @@ $(function () {
 
     "use strict";
 
-    //===== Prealoder
+    //===== Cargador / Preloader
 
     $('.preloader').delay(500).fadeOut(500);
 
     
-    //===== Sticky
+    //===== Desplazamiento / Sticky 
 
     $(window).on('scroll', function (event) {
         var scroll = $(window).scrollTop();
@@ -22,10 +22,10 @@ $(function () {
 
 
 
-    //===== Section Menu Active
+    //===== Seccion Menu activo
 
     var scrollLink = $('.page-scroll');
-    // Active link switching
+    // Cambio de enlace activado en desplazamiento
     $(window).scroll(function () {
         var scrollbarLocation = $(this).scrollTop();
 
@@ -41,7 +41,7 @@ $(function () {
     });
 
 
-    //===== close navbar-collapse when a  clicked
+    //===== cerrar navbar-collapse cuando se hace clic
 
     $(".navbar-nav a").on('click', function () {
         $(".navbar-collapse").removeClass("show");
@@ -57,49 +57,10 @@ $(function () {
     });    
     
 
-    //===== testimonial active
+    //===== Boton - Volver al inicio
 
-    $('.testimonial-active').slick({
-        dots: true,
-        speed: 800,
-        arrows: false,
-        centerMode: true,
-        centerPadding: "0",
-        slidesToShow: 3,
-        slidesToScroll: 4,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                    centerMode: false,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1,
-                }
-            },
-        ]
-    });
-
-
-    //===== Back to top
-
-    // Show or hide the sticky footer button
+    // Mostrar o ocultar el botón del footer al desplazar
+    
     $(window).on('scroll', function (event) {
         if ($(this).scrollTop() > 600) {
             $('.back-to-top').fadeIn(200);
@@ -109,7 +70,7 @@ $(function () {
     });
 
 
-    //Animate the scroll to yop
+    //Animacion al desplazarse al top
     $('.back-to-top').on('click', function (event) {
         event.preventDefault();
 
@@ -119,12 +80,12 @@ $(function () {
     });
 
 
-    //=====  WOW active
+    //=====  WOW activo - estilo
 
     new WOW().init();
 
 
-    //=====  particles
+    //=====  particulas circulares flotando
 
 
     if (document.getElementById("particles-1")) particlesJS("particles-1", {
